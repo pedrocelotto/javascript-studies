@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Teste javascript</h1>
+        <form name="formSoma" action="" method="post">
+            <p>Digite o valor 1:<input type="number" name="f_num1"></p>
+            <p>Digite o valor 2:<input type="number" name="f_num2"></p>
+            <input type="button" name="btn_soma" value="Somar" onclick="somar()" />
+            <input type="button" name="btn_multiplica" value="Multiplicar" onclick="multiplicar()" />
+            <input type="button" name="btn_subtrai" value="Subtrair" onclick="subtrair()" />
+            <input type="button" name="btn_dividir" value="Dividir" onclick="dividir()" />
+            <input type="reset" name="btn_cancela" value="Cancelar" />
+        </form>
+        <script language="javascript">
+            var num1;
+            var num2;
+            var resultado;
+
+            function somar(){
+                num1 = Number(document.formSoma.f_num1.value);
+                num2 = Number(document.formSoma.f_num2.value);
+
+                resultado = num1 + num2;
+
+                window.alert('O resultado é ' + resultado);
+            }
+            
+            function multiplicar(){
+                num1 = document.formSoma.f_num1.value;
+                num2 = document.formSoma.f_num2.value;
+
+                resultado = num1 * num2;
+
+                window.alert('O resultado é ' + resultado);
+            }
+
+            function subtrair(){
+                num1 = document.formSoma.f_num1.value;
+                num2 = document.formSoma.f_num2.value;
+
+                resultado = num1 - num2;
+
+                window.alert('O resultado é ' + resultado);
+            }
+
+            function dividir(){
+                num1 = document.formSoma.f_num1.value;
+                num2 = document.formSoma.f_num2.value;
+
+                resultado = num1 / num2;
+
+                window.alert('O resultado é ' + resultado);
+            }
+        </script>
+    </body>
+</html>
